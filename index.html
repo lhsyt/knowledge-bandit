@@ -32,9 +32,12 @@
             transition: all 0.2s ease;
         }
         .notion-card:active { transform: scale(0.99); }
+        
+        /* 平台图标微动效 */
+        .social-btn:hover { transform: translateY(-2px); }
     </style>
 </head>
-<body class="bg-[#FCFCFA] text-[#37352F] antialiased pb-20">
+<body class="bg-[#FCFCFA] text-[#37352F] antialiased pb-10">
 
     <!-- 顶部导航栏 -->
     <nav class="sticky top-0 bg-[#FCFCFA]/90 backdrop-blur-md border-b border-gray-100 z-50">
@@ -42,56 +45,59 @@
             <div class="flex-shrink-0 flex items-center gap-2 font-bold text-lg mr-4 opacity-90">
                 <img src="logo.png" alt="知识土匪" class="h-6 w-auto">
             </div>
-            <div class="flex gap-2 overflow-x-auto no-scrollbar text-sm text-gray-500">
-                <a href="#home" class="px-2 py-1 hover:text-black transition">首页</a>
-                <a href="#core-products" class="px-2 py-1 hover:text-black transition">产品</a>
-                <a href="#incubator" class="px-2 py-1 hover:text-purple-600 transition">孵化</a>
-                <a href="#join" class="px-2 py-1 hover:text-black transition">加入</a>
+            <div class="flex gap-3 text-sm text-gray-500">
+                <a href="#products" class="hover:text-black transition">产品</a>
+                <a href="#manifesto" class="hover:text-black transition">理念</a>
             </div>
         </div>
     </nav>
 
     <!-- 主要内容区 -->
-    <main class="max-w-3xl mx-auto px-5 pt-12 md:pt-20 relative">
+    <main class="max-w-3xl mx-auto px-5 pt-10 md:pt-16">
         
-        <!-- 背景光晕 -->
-        <div class="absolute top-0 right-0 w-64 h-64 bg-purple-50 rounded-full blur-3xl -translate-y-10 translate-x-10 opacity-60 -z-10"></div>
-
-        <!-- Hero 区域 -->
-        <section id="home" class="mb-24 scroll-mt-24">
-            <div class="mb-10 animate-fade-in">
-                <span class="inline-flex items-center gap-2 text-xs font-medium text-gray-500 bg-white border border-gray-200 px-3 py-1.5 rounded-full shadow-sm">
-                    <span class="w-1.5 h-1.5 bg-green-500 rounded-full"></span>
-                    人生最大的杠杆就是和一群高质量的人同行
-                </span>
+        <!-- 1. 数字名片区 (Top Card) -->
+        <section class="mb-16 text-center animate-fade-in">
+            <!-- 头像/Logo -->
+            <div class="w-24 h-24 mx-auto mb-6 bg-white rounded-full p-1 shadow-float border border-gray-100">
+                <img src="logo.png" alt="舟舟" class="w-full h-full rounded-full object-cover">
             </div>
             
-            <h1 class="text-[2.75rem] md:text-6xl font-bold tracking-tight leading-[1.3] mb-10 text-[#1A1A1A]">
-                阅读是开始<span class="text-gray-300">。</span><br>
-                思考是过程<span class="text-gray-300">。</span><br>
-                <span class="text-gray-400 font-normal font-serif italic">输出是闭环。</span>
-            </h1>
+            <h1 class="text-2xl font-bold mb-2">知识土匪</h1>
+            <p class="text-gray-500 text-sm mb-8">舟舟 | 每个人都是自己的商学院</p>
 
-            <div class="bg-white border-l-4 border-black p-6 shadow-card rounded-r-lg max-w-xl">
-                <p class="text-base md:text-lg text-gray-700 leading-loose">
-                    我们拒绝无效的“囤积式学习”。<br>
-                    <strong class="text-black">知识土匪</strong> 是一个关于野蛮生长的隐喻——<br>
-                    <span class="text-gray-500">像土匪一样掠夺知识，像工匠一样打磨输出。</span>
-                </p>
+            <!-- 全网同名链接 -->
+            <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-card max-w-lg mx-auto">
+                <h3 class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-4">Find us on · 全网同名</h3>
+                <div class="grid grid-cols-3 gap-4">
+                    <!-- 小宇宙 -->
+                    <a href="https://www.xiaoyuzhoufm.com/podcast/67b1833f41c262d1551d97a3" target="_blank" class="social-btn flex flex-col items-center gap-2 p-2 rounded-lg hover:bg-purple-50 transition group">
+                        <span class="text-2xl group-hover:scale-110 transition">🎙️</span>
+                        <span class="text-xs font-medium text-gray-600 group-hover:text-purple-600">小宇宙</span>
+                    </a>
+                    <!-- 公众号 -->
+                    <div class="social-btn flex flex-col items-center gap-2 p-2 rounded-lg hover:bg-green-50 transition group cursor-default">
+                        <span class="text-2xl group-hover:scale-110 transition">📚</span>
+                        <span class="text-xs font-medium text-gray-600 group-hover:text-green-600">公众号</span>
+                    </div>
+                    <!-- 小红书 -->
+                    <div class="social-btn flex flex-col items-center gap-2 p-2 rounded-lg hover:bg-red-50 transition group cursor-default">
+                        <span class="text-2xl group-hover:scale-110 transition">📕</span>
+                        <span class="text-xs font-medium text-gray-600 group-hover:text-red-600">小红书</span>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- 核心产品区 -->
-        <section id="core-products" class="mb-20 scroll-mt-24">
-            <h2 class="text-lg font-bold mb-6 flex items-center gap-2 border-b border-gray-100 pb-2">
-                🏆 核心战场
-            </h2>
+        <!-- 2. 核心产品区 -->
+        <section id="products" class="mb-16 scroll-mt-20">
+            <div class="flex items-center gap-2 mb-6">
+                <h2 class="text-lg font-bold">正在进行</h2>
+                <span class="text-[10px] bg-black text-white px-2 py-0.5 rounded-full">HOT</span>
+            </div>
             
             <div class="grid md:grid-cols-2 gap-5">
-                
-                <!-- 📘 知识星球 (阅读社群) -->
+                <!-- 📘 知识星球 -->
                 <div class="notion-card p-6 relative group overflow-hidden flex flex-col h-full">
-                    <div class="absolute top-0 right-0 bg-red-50 text-red-600 text-[10px] font-bold px-2 py-1 rounded-bl-lg z-10">HOT</div>
                     <div class="flex justify-between items-start mb-4">
                         <span class="text-3xl">📘</span>
                         <div class="text-right">
@@ -104,10 +110,6 @@
                         这里是知识土匪的大本营。<br>
                         在书单中共读，在思考中共创。
                     </p>
-                    <ul class="text-xs text-gray-500 space-y-1 mb-6 flex-1">
-                        <li class="flex items-center gap-1">✅ 精选非虚构书单</li>
-                        <li class="flex items-center gap-1">✅ 拒绝焦虑，长期主义</li>
-                    </ul>
                     <div class="flex gap-3 mt-auto">
                         <a href="https://wx.zsxq.com/group/48888115211148" target="_blank" class="flex-1 bg-[#1A1A1A] text-white text-center py-2 rounded-md text-sm font-medium hover:bg-black transition">加入星球</a>
                         <div class="w-9 h-9 rounded overflow-hidden border border-gray-200 flex-shrink-0">
@@ -116,103 +118,84 @@
                     </div>
                 </div>
 
-                <!-- ✍️ 写作营 (执行版本) -->
+                <!-- ✍️ 写作营 -->
                 <div class="notion-card p-6 relative flex flex-col h-full">
                     <div class="flex justify-between items-start mb-4">
                         <span class="text-3xl">✍️</span>
                         <div class="text-right">
                             <div class="text-lg font-bold text-green-600">¥199</div>
-                            <span class="text-[10px] bg-green-100 text-green-700 px-1 py-0.5 rounded">打卡满2周退¥100</span>
+                            <span class="text-[10px] bg-green-100 text-green-700 px-1 py-0.5 rounded">满勤退¥100</span>
                         </div>
                     </div>
-                    
                     <h3 class="font-bold text-lg mb-1">写作陪跑营</h3>
-                    <p class="text-xs text-gray-400 mb-4">主打“养成表达肌肉”的执行版本</p>
-
-                    <!-- 卖点列表 -->
-                    <div class="bg-gray-50 rounded-lg p-3 mb-4 flex-1">
-                        <ul class="space-y-2 text-xs text-gray-600">
-                            <li class="flex items-start gap-2">
-                                <span class="text-green-600 font-bold">⚡️</span>
-                                <span><strong>全流程引导</strong>：每日提供具体话术，解决“不知道写什么”</span>
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <span class="text-green-600 font-bold">🧱</span>
-                                <span><strong>搭建资产</strong>：教你把写的内容整理成个人知识库</span>
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <span class="text-green-600 font-bold">♾️</span>
-                                <span><strong>长期陪伴</strong>：群不解散，可一直在群里打卡</span>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <!-- 两个按钮：体验 vs 报名 -->
+                    <p class="text-xs text-gray-400 mb-4">30天全流程引导 · 养成表达肌肉</p>
+                    
                     <div class="space-y-2 mt-auto">
-                        <!-- 体验按钮 -->
-                        <a href="https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&__biz=Mzk3NTMwMjg5Ng==&scene=1&album_id=4118904188912943105#wechat_redirect" target="_blank" class="block w-full border border-gray-200 text-gray-600 text-center py-2 rounded text-xs font-medium hover:bg-gray-50 transition flex items-center justify-center gap-1">
-                            👀 犹豫？付费前先看看体验任务
+                        <a href="https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&__biz=Mzk3NTMwMjg5Ng==&scene=1&album_id=4118904188912943105#wechat_redirect" target="_blank" class="block w-full border border-gray-200 text-gray-600 text-center py-2 rounded text-xs font-medium hover:bg-gray-50 transition">
+                            👀 付费前先看体验任务
                         </a>
-                        
-                        <!-- 报名框 -->
                         <div class="bg-green-50 p-2 rounded text-center border border-green-100 flex items-center justify-center gap-2">
                             <span class="text-xs text-green-800">报名加VX:</span>
                             <span class="font-mono font-bold text-green-900 select-all">1658060657</span>
                         </div>
                     </div>
                 </div>
-
             </div>
         </section>
 
-        <!-- 孵化实验室 -->
-        <section id="incubator" class="mb-20 scroll-mt-24">
+        <!-- 3. 孵化实验室 -->
+        <section class="mb-24">
              <div class="bg-white rounded-xl p-6 border border-dashed border-gray-300 relative">
-                <h2 class="text-lg font-bold mb-2 flex items-center gap-2">
-                    🧪 孵化实验室
-                    <span class="w-2 h-2 bg-purple-500 rounded-full animate-pulse"></span>
+                <h2 class="text-sm font-bold mb-4 flex items-center gap-2 text-gray-400 uppercase">
+                    🧪 Incubator · 孵化实验室
                 </h2>
-                <p class="text-sm text-gray-500 mb-6">这里是共创区，产品由社群成员共同研发。</p>
-                
                 <div class="grid grid-cols-3 gap-3 text-center">
-                    <div class="p-3 bg-gray-50 rounded-lg">
-                        <div class="text-xl mb-1 opacity-50">🎙️</div>
+                    <div class="p-3 bg-gray-50 rounded-lg opacity-60">
+                        <div class="text-lg mb-1">🎙️</div>
                         <div class="text-xs text-gray-500">播客共创</div>
                     </div>
-                    <div class="p-3 bg-gray-50 rounded-lg">
-                        <div class="text-xl mb-1 opacity-50">🧠</div>
+                    <div class="p-3 bg-gray-50 rounded-lg opacity-60">
+                        <div class="text-lg mb-1">🧠</div>
                         <div class="text-xs text-gray-500">知识库</div>
                     </div>
-                    <div class="p-3 bg-gray-50 rounded-lg">
-                        <div class="text-xl mb-1 opacity-50">🤝</div>
+                    <div class="p-3 bg-gray-50 rounded-lg opacity-60">
+                        <div class="text-lg mb-1">🤝</div>
                         <div class="text-xs text-gray-500">合伙人</div>
                     </div>
                 </div>
              </div>
         </section>
 
-        <!-- 闭环图示 -->
-        <section class="mb-20 text-center opacity-60 hover:opacity-100 transition">
-            <div class="inline-flex items-center gap-4 text-sm font-serif text-gray-400">
-                <span>Input</span>
-                <span class="text-gray-300">→</span>
-                <span>Process</span>
-                <span class="text-gray-300">→</span>
-                <span class="text-black font-bold">Output</span>
+        <!-- 4. 结尾升华 (Manifesto) -->
+        <section id="manifesto" class="border-t border-gray-200 pt-16 pb-20 text-center relative">
+            <!-- 装饰背景字 -->
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[8rem] font-bold text-gray-100 -z-10 opacity-50 select-none">
+                BANDIT
+            </div>
+
+            <h1 class="text-3xl md:text-5xl font-bold tracking-tight leading-tight mb-8 text-[#1A1A1A]">
+                阅读是开始<span class="text-gray-300">。</span><br>
+                思考是过程<span class="text-gray-300">。</span><br>
+                <span class="text-gray-400 font-normal font-serif italic">输出是闭环。</span>
+            </h1>
+
+            <div class="max-w-xl mx-auto mb-10 px-4">
+                <p class="text-gray-500 leading-loose">
+                    我们拒绝无效的“囤积式学习”。<br>
+                    <strong class="text-black">知识土匪</strong> 是一个关于野蛮生长的隐喻——<br>
+                    像土匪一样掠夺知识，像工匠一样打磨输出。
+                </p>
+            </div>
+
+            <!-- Slogan 标签 -->
+            <div class="inline-flex items-center gap-2 text-xs text-gray-400 bg-gray-50 px-4 py-2 rounded-full">
+                💡 人生最大的杠杆就是和一群高质量的人同行
             </div>
         </section>
 
-        <!-- 底部 -->
-        <footer id="join" class="border-t border-gray-100 pt-10 pb-10">
-            <div class="text-center">
-                <h3 class="font-bold text-lg mb-6">全网搜索：知识土匪</h3>
-                <div class="flex justify-center gap-6 text-sm text-gray-500">
-                    <a href="https://www.xiaoyuzhoufm.com/podcast/67b1833f41c262d1551d97a3" class="hover:text-purple-600 transition">小宇宙</a>
-                    <span class="hover:text-black cursor-default">公众号</span>
-                    <span class="hover:text-red-500 cursor-default">小红书</span>
-                </div>
-                <p class="text-xs text-gray-300 mt-8">© 2025 知识土匪</p>
-            </div>
+        <!-- 版权 -->
+        <footer class="text-center text-xs text-gray-300 pb-8">
+            © 2025 知识土匪 | 舟舟
         </footer>
 
     </main>
